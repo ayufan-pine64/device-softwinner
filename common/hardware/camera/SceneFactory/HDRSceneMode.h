@@ -2,6 +2,7 @@
 #define __HDR_SCENE_MODE__
 
 #include <stdlib.h>
+#include <string.h>
 #include <cutils/log.h>
 #include <math.h>
 

@@ -5,6 +5,8 @@
 #include <fcntl.h> 
 #include <cutils/list.h>
 #include <utils/Mutex.h>
+#include <stdlib.h>
+#include <string.h>
 
 namespace android {
 
