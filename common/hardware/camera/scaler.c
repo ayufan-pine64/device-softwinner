@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <string.h>
+
 static int cubic_coeff[]={//32-taps
 	0, 256,   0,   0,
 	-3, 255,   4,   0,

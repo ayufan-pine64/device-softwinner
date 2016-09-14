@@ -1662,9 +1662,9 @@ int V4L2CameraDevice::getCurrentFaceFrame(void* frame, int* width, int* height)
 	if ((mCurrentV4l2buf->isThumbAvailable == 1)
 		&& (mCurrentV4l2buf->thumbUsedForPreview == 1))
 	{
-		camera_phy_flush_cache((void*)mCurrentV4l2buf->addrVirY + (ALIGN_16B(mCurrentV4l2buf->width) * mCurrentV4l2buf->height * 3 / 2), ALIGN_16B(mCurrentV4l2buf->thumbWidth) * mCurrentV4l2buf->thumbHeight);
+		camera_phy_flush_cache((char *)mCurrentV4l2buf->addrVirY + (ALIGN_16B(mCurrentV4l2buf->width) * mCurrentV4l2buf->height * 3 / 2), ALIGN_16B(mCurrentV4l2buf->thumbWidth) * mCurrentV4l2buf->thumbHeight);
 		memcpy(frame, 
-				(void*)mCurrentV4l2buf->addrVirY + ALIGN_4K((ALIGN_16B(mCurrentV4l2buf->width) * mCurrentV4l2buf->height * 3 / 2)), 
+				(char *)mCurrentV4l2buf->addrVirY + ALIGN_4K((ALIGN_16B(mCurrentV4l2buf->width) * mCurrentV4l2buf->height * 3 / 2)), 
 				ALIGN_16B(mCurrentV4l2buf->thumbWidth) * mCurrentV4l2buf->thumbHeight);
 		*width = mCurrentV4l2buf->thumbWidth;
 		*height = mCurrentV4l2buf->thumbHeight;
@@ -2033,7 +2033,7 @@ int V4L2CameraDevice::v4l2QueryBuf()
 					i, mVideoBuffer.buf_vir_addr[i], mVideoBuffer.buf_phy_addr[i], buffer_len);
 			
 			memset((void*)mVideoBuffer.buf_vir_addr[i], 0x10, mFrameWidth * mFrameHeight);
-			memset((void*)mVideoBuffer.buf_vir_addr[i] + mFrameWidth * mFrameHeight, 
+			memset((char *)mVideoBuffer.buf_vir_addr[i] + mFrameWidth * mFrameHeight, 
 					0x80, mFrameWidth * mFrameHeight / 2);
 		}
 	} 

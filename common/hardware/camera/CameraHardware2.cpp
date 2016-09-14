@@ -1670,7 +1670,7 @@ void CameraHardware::releaseRecordingFrame(const void* opaque)
 		{
 			ALOGE("releaseRecordingFrame,error buffer type: %d", buffer_type);
 		}
-		mV4L2CameraDevice->releasePreviewFrame(((VencInputBuffer*)(opaque+4))->nID);
+		mV4L2CameraDevice->releasePreviewFrame(((VencInputBuffer*)((int *)opaque+4))->nID);
 #endif    	
 	}
 }
