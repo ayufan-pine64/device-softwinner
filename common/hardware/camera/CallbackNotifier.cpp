@@ -814,7 +814,7 @@ void CallbackNotifier::onNextFrameHW(const void* frame)
 		{
 			pbuf->refCnt++;
 			memcpy(cam_buff->data, &buffer_type, 4);
-            memcpy(cam_buff->data + 4, &sInputBuffer, sizeof(VencInputBuffer));
+            memcpy((char *)cam_buff->data + 4, &sInputBuffer, sizeof(VencInputBuffer));
 			
             mDataCBTimestamp(pbuf->timeStamp, CAMERA_MSG_VIDEO_FRAME,
                                cam_buff, 0, mCallbackCookie);
@@ -832,7 +832,7 @@ void CallbackNotifier::onNextFrameHW(const void* frame)
         if (NULL != cam_buff && NULL != cam_buff->data) 
 		{
 			memcpy(cam_buff->data, &buffer_type, 4);
-            memcpy(cam_buff->data + 4, &sInputBuffer, sizeof(VencInputBuffer));
+            memcpy((char *)cam_buff->data + 4, &sInputBuffer, sizeof(VencInputBuffer));
 			mDataCB(CAMERA_MSG_PREVIEW_FRAME, cam_buff, 0, NULL, mCallbackCookie);
 			cam_buff->release(cam_buff);
         } 
