@@ -26,10 +26,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.primary.tulip
 
-# camera
-PRODUCT_PACKAGES += \
-    camera.tulip
-
 PRODUCT_PACKAGES +=\
     charger_res_images \
     charger
