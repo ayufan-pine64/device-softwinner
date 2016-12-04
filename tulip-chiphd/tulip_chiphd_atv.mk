@@ -37,7 +37,8 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 $(call inherit-product, vendor/google/atv-build/atv-vendor.mk)
 
 PRODUCT_BRAND := Allwinner
-PRODUCT_NAME := tulip_chiphd_atv
-PRODUCT_DEVICE := tulip-chiphd
+PRODUCT_NAME := fugu
+PRODUCT_DEVICE := fugu
+PRODUCT_BOARD := fugu
 PRODUCT_MODEL := PINE A64
 PRODUCT_MANUFACTURER := Allwinner
