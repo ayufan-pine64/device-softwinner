@@ -1,7 +1,7 @@
 /dev/block/mmcblk0p1        /bootloader vfat    ro                                                            				                      wait
-/dev/block/mmcblk0p2        /system     ext4    ro,barrier=1                                                            				            wait
-/dev/block/mmcblk0p3        /cache      ext4    noatime,nosuid,nodev,barrier=1,data=ordered,nomblk_io_submit,noauto_da_alloc,errors=panic   wait,check
-/dev/block/mmcblk0p4        /data       ext4    noatime,nosuid,nodev,barrier=1,data=ordered,nomblk_io_submit,noauto_da_alloc,errors=panic   wait,check
+/dev/block/mmcblk0p2        /system     f2fs    ro,nosuid,nodev,noatime,nodiratime,background_gc=on,user_xattr,acl              wait
+/dev/block/mmcblk0p3        /cache      f2fs    rw,nosuid,nodev,noatime,nodiratime,inline_xattr   wait,check
+/dev/block/mmcblk0p4        /data       f2fs    rw,discard,nosuid,nodev,noatime,nodiratime,nobarrier,inline_xattr,inline_data   wait,check
 
 /devices/soc.0/1c10000.sdmmc/mmc_host/mmc*   auto           auto    defaults                                                                voldmanaged=sdcard1:auto
 /devices/soc.0/1c1a000.ehci0-controller/usb* auto           auto    defaults                                                                voldmanaged=usb:auto

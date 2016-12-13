@@ -35,6 +35,13 @@ PRODUCT_PACKAGES += \
     setmacaddr \
     setbtmacaddr
 
+# F2FS filesystem
+ PRODUCT_PACKAGES += \
+ 	mkfs.f2fs \
+ 	fsck.f2fs \
+	fibmap.f2fs \
+ 	f2fstat
+
 # xml
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \

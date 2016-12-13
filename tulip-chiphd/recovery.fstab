@@ -4,9 +4,9 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 /dev/block/mmcblk0p1        /bootloader   vfat    defaults  defaults
-/dev/block/mmcblk0p2        /system       ext4    defaults  defaults
-/dev/block/mmcblk0p3        /cache        ext4    defaults  defaults
-/dev/block/mmcblk0p4        /data         ext4    defaults  defaults
+/dev/block/mmcblk0p2        /system       auto    defaults  defaults
+/dev/block/mmcblk0p3        /cache        auto    defaults  defaults
+/dev/block/mmcblk0p4        /data         auto    defaults  defaults
 /dev/block/mmcblk0p1        /sdcard       vfat    defaults  defaults
 
 /dev/block/mmcblk1p1                  /extsd          vfat    defaults                                                        defaults
