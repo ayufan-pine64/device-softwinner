@@ -85,7 +85,7 @@ PRODUCT_COPY_FILES += \
     device/softwinner/tulip-chiphd/configs/gt9xxf_ts.idc:system/usr/idc/gt9xxf_ts.idc
 
 PRODUCT_COPY_FILES += \
-    device/softwinner/tulip-chipid/wifi_efuse_8723bs-vq0.map:system/etc/wifi/wifi_efuse_8723bs-vq0.map
+    device/softwinner/tulip-chiphd/wifi_efuse_8723bs-vq0.map:system/etc/wifi/wifi_efuse_8723bs-vq0.map
 
 #PRODUCT_COPY_FILES += \
     device/softwinner/tulip-chiphd/hawkview/sensor_list_cfg.ini:system/etc/hawkview/sensor_list_cfg.ini
